@@ -64,6 +64,7 @@ return require("packer").startup(function(use)
 	use("nvim-telescope/telescope-file-browser.nvim")
 	use("folke/which-key.nvim")
 	use("vimwiki/vimwiki")
+	use("rcarriga/nvim-notify")
 	use({
 		"ldelossa/gh.nvim",
 		requires = { { "ldelossa/litee.nvim" } },
