@@ -38,29 +38,6 @@ end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig["tsserver"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-	cmd = { "typescript-language-server", "--stdio" },
-	filetypes = {
-		"javascript",
-		"javascriptreact",
-		"javascript.jsx",
-		"typescript",
-		"typescriptreact",
-		"typescript.tsx",
-	},
-	init_options = { hostInfo = "neovim" },
-	single_file_support = true,
-})
-
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
-
 lspconfig["sumneko_lua"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -77,16 +54,6 @@ lspconfig["sumneko_lua"].setup({
 			},
 		},
 	},
-})
-
-lspconfig["html"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig["cssls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
 })
 
 lspconfig["marksman"].setup({
