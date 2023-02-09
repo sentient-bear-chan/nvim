@@ -23,7 +23,7 @@ if not status then
 	return
 end
 
-return require("packer").startup(function(use)
+return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use("folke/tokyonight.nvim")
@@ -44,7 +44,6 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("glepnir/lspsaga.nvim")
-	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
