@@ -17,7 +17,7 @@ mason.setup({})
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver",
+		"ruby_ls",
 		"sumneko_lua",
 		"marksman",
 	},

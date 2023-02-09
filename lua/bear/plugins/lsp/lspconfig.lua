@@ -60,3 +60,8 @@ lspconfig["marksman"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+
+lspconfig["ruby_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
