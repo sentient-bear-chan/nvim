@@ -8,11 +8,6 @@ if not cmp_nvim_lsp_status then
 	return
 end
 
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-	return
-end
-
 local map = vim.keymap.set
 
 local on_attach = function(client, bufnr)
@@ -30,38 +25,11 @@ local on_attach = function(client, bufnr)
 	map("n", "K", ":Lspsaga hover_doc<CR>", opts)
 	map("n", "<leader>o", ":LSoutlineToggle<CR>", opts)
 	map({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
-
-	if client.name == "tsserver" then
-		map("n", "<leader>rf", ":TypescriptRenameFile<CR>")
-	end
 end
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig["tsserver"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-	cmd = { "typescript-language-server", "--stdio" },
-	filetypes = {
-		"javascript",
-		"javascriptreact",
-		"javascript.jsx",
-		"typescript",
-		"typescriptreact",
-		"typescript.tsx",
-	},
-	init_options = { hostInfo = "neovim" },
-	single_file_support = true,
-})
-
-typescript.setup({
-	server = {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	},
-})
-
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
@@ -77,19 +45,4 @@ lspconfig["sumneko_lua"].setup({
 			},
 		},
 	},
-})
-
-lspconfig["html"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig["cssls"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig["marksman"].setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
 })

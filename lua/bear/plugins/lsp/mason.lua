@@ -17,15 +17,12 @@ mason.setup({})
 
 mason_lspconfig.setup({
 	ensure_installed = {
-		"tsserver",
-		"sumneko_lua",
-		"marksman",
+		"lua_ls",
 	},
 })
 
 mason_null_ls.setup({
 	ensure_installed = {
-		"prettier",
 		"stylua",
 	},
 })
