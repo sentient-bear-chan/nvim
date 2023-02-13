@@ -26,7 +26,7 @@ end
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	use("folke/tokyonight.nvim")
+	use("EdenEast/nightfox.nvim")
 	use("NumToStr/Comment.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("nvim-tree/nvim-tree.lua")
@@ -65,6 +65,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 	use("vimwiki/vimwiki")
 	use("rcarriga/nvim-notify")
+	use("xiyaowong/nvim-transparent")
 	use({
 		"ldelossa/gh.nvim",
 		requires = { { "ldelossa/litee.nvim" } },
