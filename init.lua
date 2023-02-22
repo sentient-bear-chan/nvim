@@ -1,8 +1,8 @@
-require("impatient")
-
 require("core.settings")
 require("core.mappings")
 require("core.plugins")
+
+require("impatient")
 
 require("plugins.lualine")
 require("plugins.tokyonight")
