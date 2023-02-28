@@ -61,13 +61,3 @@ map("n", "<leader>gh", ":Git help<CR>", opts)
 map("n", "<leader>ga", ":Git add<CR>", opts)
 map("n", "<leader>gc", ":Git commit<CR>", opts)
 map("n", "<leader>gb", ":Git branch<CR>", opts)
-
--- Debugging
-map("n", "<leader>db", ":lua require('dap').toggle_breakpoint()<CR>", opts)
-map("n", "<leader>dc", ":lua require('dap').continue()<CR>", opts)
-map("n", "<leader>dso", ":lua require('dap').step_over()<CR>", opts)
-map("n", "<leader>dsi", ":lua require('dap').step_into()<CR>", opts)
-map("n", "<leader>di", ":lua require('dap').repl.open()<CR>", opts)
-
--- Formatting
-map("n", "<leader>nf", ":lua vim.lsp.buf.format { async = true }<CR>", opts)

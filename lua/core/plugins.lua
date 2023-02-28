@@ -27,8 +27,6 @@ return require('packer').startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'folke/which-key.nvim'
 
-  use 'mfussenegger/nvim-dap'
-
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
 
@@ -44,9 +42,6 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'onsails/lspkind.nvim'
   use 'glepnir/lspsaga.nvim'
-
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'jay-babu/mason-null-ls.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
