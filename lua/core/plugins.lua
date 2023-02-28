@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'lewis6991/impatient.nvim'
   use 'nvim-lua/popup.nvim'
-  use 'folke/which-key.nvim'
+  use 'xiyaowong/nvim-transparent'
 
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
