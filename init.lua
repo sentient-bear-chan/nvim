@@ -5,7 +5,7 @@ require("core.plugins")
 require("impatient")
 
 require("plugins.lualine")
-require("plugins.tokyonight")
+require("plugins.gruvbox-material")
 require("plugins.barbar")
 require("plugins.telescope")
 require("plugins.treesitter")
